@@ -7,8 +7,50 @@
   src: url("/fontes/Benguiat Bold.ttf");
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  background-color: #0c0102;
+  color: rgba(255, 255, 255, 0.89);
+  font-family: "Poppins", sans-serif;
+}
+
+#preloader path {
+  fill: rgba(112, 1, 1, 0.418);
+  stroke: rgb(112, 1, 1);
+  stroke-dasharray: 700px;
+  stroke-dashoffset: 700px;
+}
+
 @keyframes textoinfinito {
   100% {
     transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 430px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .sessaodois button {
+    display: none;
+  }
+
+  .depoimentos .depoimento {
+    flex-direction: column;
+    width: 300%;
+  }
+
+  .agradecimentos ul {
+    width: max-content;
+    gap: 32px;
+    animation: textoinfinito 15s infinite linear;
   }
 }

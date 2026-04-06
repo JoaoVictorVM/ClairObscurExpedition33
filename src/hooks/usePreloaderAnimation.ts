@@ -13,8 +13,9 @@ export function usePreloaderAnimation({
       onComplete() {
         gsap.to("#preloader", {
           opacity: 0,
-          display: "none",
+          duration: 0.5,
           onComplete,
+          onCompleteParams: [],
         });
       },
     });
@@ -27,7 +28,6 @@ export function usePreloaderAnimation({
     tl.to("#preloader path", {
       fill: "rgb(112, 1, 1)",
       duration: 0.5,
-      strokeDashoffset: 0,
     });
-  }, [onComplete]);
+  }, []);
 }
